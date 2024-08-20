@@ -55,9 +55,9 @@ namespace AicRemoteEvt {
         /// </summary>
         public Action<string> OnGetMsg { get; }
 
-        ///	<summary>
-        ///	Set a hook listening to any messages sent to this process.
-        ///	</summary>
+        /// <summary>
+        /// Set a hook listening to any messages sent to this process.
+        /// </summary>
         /// <param name="onGetMsg"> The callback after recieving message. </param>
         public WinHookMsgGetter(Action<string> onGetMsg = null, ulong acceptedDwData = DWDATA_DEFAULT) {
             AcceptedDwData = acceptedDwData;

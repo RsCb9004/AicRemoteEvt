@@ -57,43 +57,43 @@ namespace AicRemoteEvt {
         }
 
         /*
-		private const string ResNamespaceName = "AicRemoteEvt";
+        private const string ResNamespaceName = "AicRemoteEvt";
 
-		private static void CreateFileFromRes(string fileName) {
-			string resName = $"{ResNamespaceName}.{fileName}";
-			using(var resStream = typeof(RemoteEvt).Assembly.GetManifestResourceStream(resName))
-			using(var fileStream = File.Create(fileName)) {
-				resStream.CopyTo(fileStream);
-			}
-			Instance.Logger.LogInfo($"Created {fileName}.");
-		}
-		*/
+        private static void CreateFileFromRes(string fileName) {
+            string resName = $"{ResNamespaceName}.{fileName}";
+            using(var resStream = typeof(RemoteEvt).Assembly.GetManifestResourceStream(resName))
+            using(var fileStream = File.Create(fileName)) {
+                resStream.CopyTo(fileStream);
+            }
+            Instance.Logger.LogInfo($"Created {fileName}.");
+        }
+        */
 
 
         // There's a bug in fucking Mono. So we can't use this fucking shit.
         /*
-		private const string PipeExeName = "pipe-transfer.exe";
-		private static Stream StartPipeProcess() {
-			var process = new Process();
-			process.StartInfo.FileName = PipeExeName;
-			process.StartInfo.UseShellExecute = false;
-			process.StartInfo.RedirectStandardOutput = true;
-			process.Start();
-			return process.StandardOutput.BaseStream;
-		}
-		*/
+        private const string PipeExeName = "pipe-transfer.exe";
+        private static Stream StartPipeProcess() {
+            var process = new Process();
+            process.StartInfo.FileName = PipeExeName;
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardOutput = true;
+            process.Start();
+            return process.StandardOutput.BaseStream;
+        }
+        */
 
         /*
-		private static async Task<byte[]> ReadBytesAsync(Stream stream, int length) {
-			byte[] res = new byte[length];
-			await stream.ReadAsync(res, 0, length);
-			return res;
-		}
+        private static async Task<byte[]> ReadBytesAsync(Stream stream, int length) {
+            byte[] res = new byte[length];
+            await stream.ReadAsync(res, 0, length);
+            return res;
+        }
 
-		private static async Task<string> ReadStringAsync(Stream stream) {
-			int len = BitConverter.ToUInt16(await ReadBytesAsync(stream, 2), 0);
-			return Encoding.UTF8.GetString(await ReadBytesAsync(stream, len));
-		}
-		*/
+        private static async Task<string> ReadStringAsync(Stream stream) {
+            int len = BitConverter.ToUInt16(await ReadBytesAsync(stream, 2), 0);
+            return Encoding.UTF8.GetString(await ReadBytesAsync(stream, len));
+        }
+        */
     }
 }
